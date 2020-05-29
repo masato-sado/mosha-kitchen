@@ -1,0 +1,325 @@
+body {
+  width: 100%;
+  color: rgb(58, 56, 56);
+}
+
+/* アニメーションで表示させるため最初は非表示 */
+.animated {
+  opacity: 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(37, 37, 37);
+}
+
+a:hover {
+  font-weight: 600;
+}
+
+#active {
+  color: rgb(146, 37, 37)
+}
+
+/* *
+-----ヘッダー始まり-----
+* */
+
+header a img {
+  width: 80%;
+  text-align: center;
+}
+
+.navbar-brand {
+  width: 80%;
+}
+
+header nav ul {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+header nav ul li {
+  width: 100%;
+  }
+
+header nav ul li a {
+  text-decoration: none;
+}
+
+/* *
+-----ヘッダー終わり-----
+* */
+
+/* *
+-----メイン画像-----
+* */
+
+.main_visual img {
+  width: 100%;
+}
+
+
+/* *
+-----TECHACADEMY　KITCHENについて-----
+* */
+.top-wrapper {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 50px;
+  border : solid 1px brown;
+  font-size: 30px
+}
+
+.main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.main p {
+  margin: 30px 0;
+}
+
+.content h2 {
+  margin-top: 30px;
+  background-color: rgb(224, 222, 224);
+  border-left: solid 2px red;
+  font-size: 18px;
+}
+
+.sidebanar {
+  margin: 30px 0;
+}
+
+.side_bar {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.side_bar ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+.side_bar h3 {
+  background-color: brown;
+  margin-top: 0;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.sidebanar {
+  border: 1px solid brown;
+}
+
+/* *
+-----お知らせ始まり-----
+* */
+
+.info h4 {
+  border: 1px solid brown;
+  margin-top: 30px;
+  font-size: 20px
+}
+
+.info-item {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.info p {
+  margin-top: 20px;
+}
+
+.info a {
+  margin-left: 10px;
+}
+
+/* *
+-----お知らせ終わり-----
+* */
+
+/* *
+-----フッター始まり-----
+* */
+
+footer {
+  background-color: rgb(223, 219, 219);
+}
+
+footer ul {
+  width: 100%;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+footer ul li {
+  margin-right: 20px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: rgb(61, 61, 61);
+}
+
+.small {
+  background-color: brown;
+  text-align: center;
+}
+
+small {
+  color: white;
+}
+
+/* *
+-----フッター終わり-----
+* */
+
+/* *
+-----レスポンシブ始まり-----
+* */
+
+@media(min-width: 984px) {
+  body {
+    width: 984px;
+    margin: 0 auto;
+  }
+  
+  header {
+    width: 984px
+  }
+
+  header a img {
+    width: 50%;
+  }
+
+  header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  header nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  h1 {
+    padding-left: 20px;
+  }
+
+  .top-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main {
+    display: flex;
+  }
+
+  .content {
+    width: 700px
+  }
+
+  .content h2 {
+    padding-left: 20px;
+  }
+
+  .side_bar {
+    width: 234px;
+    margin-top: 20px
+  }
+
+  footer {
+    width: 984px;
+    margin: 0 auto;
+  }
+
+  footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer ul li {
+    margin-right: 20px;
+    border-left: 1px solid black;
+  }
+
+  footer ul li a {
+    padding-left: 15px;
+  }
+
+  .small {
+    background-color: brown;
+    text-align: center;
+  }  
+}
+
+/* *
+-----レスポンシブ 終わり-----
+* */
+
+/*
+ * -------------------------------
+ *フェードイン・フェードアウト - ここから
+ * -------------------------------
+ */
+/* オーバーレイする背景 初期状態 */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* オーバーレイする背景 開始時アニメーション */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+
+/* オーバーレイする背景 終了時アニメーション */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* コンテンツ 初期状態 */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* コンテンツ 開始時アニメーション */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+
+/* コンテンツ 終了時アニメーション */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
+/*
+ * -------------------------------
+ *フェードイン・フェードアウト - ここまで
+ * -------------------------------
+ */
+
+/* 印刷用スタイル */
+@media print {
+  .animated {
+    /* すべて表示 */
+    opacity: 1;
+  }
+}
